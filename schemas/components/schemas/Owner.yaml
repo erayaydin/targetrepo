@@ -1,0 +1,16 @@
+type: object
+required:
+  - id
+  - name
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  email:
+    type: string
+    format: email
+  pets:
+    type: array
+    items:
+      $ref: ./Pet.yaml
