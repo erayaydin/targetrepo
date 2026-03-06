@@ -1,0 +1,17 @@
+type: object
+required:
+  - id
+  - petId
+  - adoptedAt
+properties:
+  id:
+    type: string
+  petId:
+    type: string
+  adopterName:
+    type: string
+  adoptedAt:
+    type: string
+    format: date
+  notes:
+    type: string
