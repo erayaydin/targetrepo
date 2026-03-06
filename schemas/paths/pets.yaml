@@ -1,0 +1,18 @@
+get:
+  summary: List pets
+  operationId: listPets
+  parameters:
+    - name: limit
+      in: query
+      schema:
+        type: integer
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Pet.yaml
+          examples:
+            default:
+              $ref: ./examples/pets/get_pet_200.json
