@@ -1,0 +1,12 @@
+get:
+  operationId: listOwners
+  summary: List all pet owners
+  responses:
+    '200':
+      description: A list of owners
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/Owner.yaml
