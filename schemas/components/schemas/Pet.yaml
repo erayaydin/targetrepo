@@ -2,9 +2,29 @@ type: object
 properties:
   name:
     type: string
+  age:
+    type: integer
+    description: Age in years
+  gender:
+    type: string
+    enum:
+      - male
+      - female
+      - unknown
+  color:
+    type: string
+    description: Primary coat color
+  weight:
+    type: number
+    format: float
+    description: Weight in kilograms
   breed:
     $ref: ./breeds/Breed.yaml
   vaccination:
     $ref: ./vaccinations/Vaccination.yaml
   microchip:
     $ref: ./health/Microchip.yaml
+  allergies:
+    type: array
+    items:
+      $ref: ./Allergy.yaml
